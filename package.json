@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "firebase": "^7.17.1",
+    "formik": "^2.1.5",
+    "input-moment": "^0.4.0",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-input-moment": "^1.7.13",
+    "react-notifications-component": "^2.4.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-semantic-ui-datepickers": "^2.8.0",
+    "semantic-ui-calendar-react": "^0.15.3",
+    "semantic-ui-react": "^1.1.0",
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "start": "react-scripts start",
