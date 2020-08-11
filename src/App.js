@@ -6,7 +6,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import { theme } from './styles/theme';
 import { routes } from './routes';
 
-import firebase from './components/Firebase/firebase';
+import { isInitialized } from './components/Firebase/firebase';
 import ReactNotification from 'react-notifications-component';
 
 import Indicator from './components/Shared/Indicator';
@@ -16,19 +16,18 @@ import InstructorAddLessonPage from './pages/InstructorAddLessonPage';
 import InstructorHomePage from './pages/InstructorHomePage';
 import InstructorListOfStudetnsPage from './pages/InstructorListOfStudetnsPage';
 import HomePage from './pages/HomePage';
-import SignUpPage from './pages/SignUpPage';
+import CreateAccountPage from './pages/CreateAccountPage';
 
 function App() {
-  // const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+  const [firebaseInitialized, setFirebaseInitialized] = useState(false);
 
-  // useEffect(() => {
-  //   firebase.isInitialized().then(val => {
-  //     setFirebaseInitialized(val);
-  //   });
-  // });
+  useEffect(() => {
+    isInitialized().then(val => {
+      setFirebaseInitialized(val);
+    });
+  });
 
-  // return firebaseInitialized !== false ? (
-  return (
+  return firebaseInitialized !== false ? (
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
@@ -40,16 +39,15 @@ function App() {
           <Route exact path={routes.homeInstructor} component={InstructorHomePage} />
           <Route exact path={routes.listOfStudents} component={InstructorListOfStudetnsPage} />
 
-          <Route exact path={routes.signUp} component={SignUpPage} />
+          <Route exact path={routes.reateAccountPage} component={CreateAccountPage} />
         </Switch>
       </ThemeProvider>
     </Router>
+  ) : (
+    <div id='loader'>
+      <Indicator />
+    </div>
   );
-  // ) : (
-  //   <div id='loader'>
-  //     <Indicator />
-  //   </div>
-  // );
 }
 
 export default App;

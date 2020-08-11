@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Formik, Form as FormFormik } from 'formik';
 import { Redirect } from 'react-router-dom';
 import * as yup from 'yup';
 
+import notification from '../Functions/notification';
 import { auth, generateUserDocument } from '../components/Firebase/firebase';
+import { UserContext } from '../components/Firebase/UserProvider';
 
 import Form from '../components/Login/Form';
 import Input from '../components/Login/Input';
@@ -14,7 +16,9 @@ const schema = yup.object().shape({
   password: yup.string().required().min(4),
 });
 
-const SignUpPage = props => {
+const CreateAccountPage = () => {
+  const user = useContext(UserContext);
+
   const [status, setStatus] = useState('');
   const [error, setError] = useState('');
 
@@ -23,9 +27,9 @@ const SignUpPage = props => {
 
     try {
       const { user } = await auth.createUserWithEmailAndPassword(values.email, values.password);
-      console.log(user);
       generateUserDocument(user, { name: values.name, role: values.role, phone: values.phone });
-      setStatus('');
+      setStatus('success');
+      notification('Udało się', 'Konto zostało założone', 'success');
     } catch (error) {
       setError(error.message);
       console.log(error);
@@ -35,8 +39,8 @@ const SignUpPage = props => {
 
   return (
     <>
-      {status === 'success' ? (
-        <Redirect to={{ pathname: '/list' }} />
+      {user?.role !== 'admin' ? (
+        <Redirect to={{ pathname: '/login' }} />
       ) : (
         <Form title='Utwórz konto' status={status} error={error}>
           <Formik
@@ -61,4 +65,4 @@ const SignUpPage = props => {
   );
 };
 
-export default SignUpPage;
+export default CreateAccountPage;

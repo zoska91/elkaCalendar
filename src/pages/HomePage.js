@@ -6,7 +6,6 @@ import { auth } from '../components/Firebase/firebase';
 
 const HomePage = () => {
   const user = useContext(UserContext);
-  console.log(user);
 
   return !user ? (
     <Redirect to='/login' />

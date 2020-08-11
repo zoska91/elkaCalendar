@@ -16,6 +16,7 @@ class InstructorAddLessonPage extends Component {
   };
 
   render() {
+    console.log(this.state.m);
     return (
       <div className='app'>
         <h1>hello</h1>

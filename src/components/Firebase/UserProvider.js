@@ -16,8 +16,13 @@ class UserProvider extends Component {
   };
 
   render() {
+    console.log(this.state.user);
     return (
-      <UserContext.Provider value={this.state.user}>{this.props.children}</UserContext.Provider>
+      <>
+        {this.state.user !== null && (
+          <UserContext.Provider value={this.state.user}>{this.props.children}</UserContext.Provider>
+        )}
+      </>
     );
   }
 }

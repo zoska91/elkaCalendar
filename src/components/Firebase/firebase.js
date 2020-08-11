@@ -40,3 +40,9 @@ const getUserDocument = async uid => {
     console.error('Error fetching user', error);
   }
 };
+
+export const isInitialized = () => {
+  return new Promise(resolve => {
+    auth.onAuthStateChanged(resolve);
+  });
+};
