@@ -1,9 +1,9 @@
 import moment from 'moment';
 import React, { Component } from 'react';
-import InputMoment from '../components/input-moment/src/input-moment';
+import InputMoment from '../components/Datapicker/input-moment';
 import styled from 'styled-components';
 
-import '../components/input-moment/src/scss/input-moment.scss';
+import '../components/Datapicker/scss/input-moment.scss';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.bg};
