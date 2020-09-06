@@ -6,12 +6,14 @@ import { auth } from '../components/Firebase/firebase';
 
 const HomePage = () => {
   const user = useContext(UserContext);
-
+  console.log(user);
   return !user ? (
     <Redirect to='/login' />
+  ) : user.role === 'INS' || user.role === 'admin' ? (
+    <Redirect to='/home-instructor' />
   ) : (
     <div>
-      <p>hello</p>
+      <p>hello student</p>
       <button
         onClick={() => {
           auth.signOut();

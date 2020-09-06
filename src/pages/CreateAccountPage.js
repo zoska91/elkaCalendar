@@ -26,8 +26,15 @@ const CreateAccountPage = () => {
     setStatus('loading');
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(values.email, values.password);
-      generateUserDocument(user, { name: values.name, role: values.role, phone: values.phone });
+      const { user } = await auth.createUserWithEmailAndPassword(
+        values.email,
+        values.password
+      );
+      generateUserDocument(user, {
+        name: values.name,
+        role: values.role,
+        phone: values.phone,
+      });
       setStatus('success');
       notification('Udało się', 'Konto zostało założone', 'success');
     } catch (error) {
@@ -44,7 +51,13 @@ const CreateAccountPage = () => {
       ) : (
         <Form title='Utwórz konto' status={status} error={error}>
           <Formik
-            initialValues={{ email: '', password: '', name: '', phone: '', role: '' }}
+            initialValues={{
+              email: '',
+              password: '',
+              name: '',
+              phone: '',
+              role: '',
+            }}
             onSubmit={handleSubmit}
             validationSchema={schema}
           >
@@ -54,7 +67,11 @@ const CreateAccountPage = () => {
                 <Input type='text' name='name' label='Imię i Nazwisko' />
                 <Input type='number' name='phone' label='Nr telefonu' />
                 <Input type='text' name='role' label='Rola (INS/STUD)' />
-                <Input type='password' name='password' label='Hasło tymczasowe' />
+                <Input
+                  type='password'
+                  name='password'
+                  label='Hasło tymczasowe'
+                />
                 <Button type='submit'>Utwórz konto</Button>
               </FormFormik>
             )}

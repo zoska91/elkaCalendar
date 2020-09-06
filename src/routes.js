@@ -2,7 +2,8 @@ export const routes = {
   home: '/',
   login: '/login',
   createAccount: '/create-account',
-  addLesson: '/addLesson',
-  homeInstructor: 'home-instructor',
-  listOfStudents: 'list-of-students',
+  addLesson: '/add-lesson',
+  homeInstructor: '/home-instructor',
+  listOfStudents: '/list-of-students',
+  instructorCalendar: '/calendar-instructor',
 };

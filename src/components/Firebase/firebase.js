@@ -5,6 +5,7 @@ import 'firebase/firestore';
 import { firebaseConfig } from './config';
 
 firebase.initializeApp(firebaseConfig);
+
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
@@ -45,4 +46,11 @@ export const isInitialized = () => {
   return new Promise(resolve => {
     auth.onAuthStateChanged(resolve);
   });
+};
+
+export const getAllStudents = async user => {
+  const snapshot = await firebase.firestore().collection('users').get();
+  const data = snapshot.docs.map(doc => doc.data());
+  console.log(data);
+  return data;
 };

@@ -1,43 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
-import ListOfStudents from '../components/Shared/ListOfStudents';
+import { getAllStudents } from '../components/Firebase/firebase';
 
-const list = [
-  {
-    id: 1,
-    name: 'Adam Nowak',
-    tel: '505605956',
-  },
-  {
-    id: 2,
-    name: 'Adam Nowak',
-    tel: '505605956',
-  },
-  {
-    id: 3,
-    name: 'Adam Nowak',
-    tel: '505605956',
-  },
-  {
-    id: 4,
-    name: 'Adam Nowak',
-    tel: '505605956',
-  },
-  {
-    id: 5,
-    name: 'Adam Nowak',
-    tel: '505605956',
-  },
-];
+const Wrapper = styled.div``;
 
-const InstructorListOfStudetnsPage = () => {
+const LogOut = styled.button``;
+
+const Menu = styled.nav``;
+
+const MenuItem = styled.li``;
+
+const AllStudentsPage = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getAllStudents();
+
+      const users = data.filter(el => el.role === 'STUD');
+      console.log(users);
+      setUsers(users);
+    };
+
+    getUsers();
+  }, []);
+
+  const usersList = users.map(el => <p>{el.name}</p>);
+
   return (
-    <div>
-      <p>
-        <ListOfStudents list={list} />
-      </p>
-    </div>
+    <Wrapper>
+      <LogOut>Wyloguj</LogOut>
+      <Menu>
+        <ul>
+          <MenuItem>Zarządzaj kursantami</MenuItem>
+          <MenuItem>Dodanie jazdy</MenuItem>
+          <MenuItem>Zadeklaruj wolne terminy</MenuItem>
+        </ul>
+
+        {usersList}
+      </Menu>
+    </Wrapper>
   );
 };
 
-export default InstructorListOfStudetnsPage;
+export default AllStudentsPage;

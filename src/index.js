@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import UserProvider from './components/Firebase/UserProvider';
 
 import 'react-notifications-component/dist/theme.css';
-import './components/DataPicker/src/less/input-moment.scss';
 
 ReactDOM.render(
   <React.StrictMode>
