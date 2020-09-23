@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/elkaCalendar/static/css/main.0328cd33.chunk.css",
+    "main.js": "/elkaCalendar/static/js/main.193be0dc.chunk.js",
+    "main.js.map": "/elkaCalendar/static/js/main.193be0dc.chunk.js.map",
+    "runtime-main.js": "/elkaCalendar/static/js/runtime-main.a477c7da.js",
+    "runtime-main.js.map": "/elkaCalendar/static/js/runtime-main.a477c7da.js.map",
+    "static/css/2.9382be04.chunk.css": "/elkaCalendar/static/css/2.9382be04.chunk.css",
+    "static/js/2.13e6b53c.chunk.js": "/elkaCalendar/static/js/2.13e6b53c.chunk.js",
+    "static/js/2.13e6b53c.chunk.js.map": "/elkaCalendar/static/js/2.13e6b53c.chunk.js.map",
+    "index.html": "/elkaCalendar/index.html",
+    "precache-manifest.422d5833ac48f9e3220cc2d9518c10c3.js": "/elkaCalendar/precache-manifest.422d5833ac48f9e3220cc2d9518c10c3.js",
+    "service-worker.js": "/elkaCalendar/service-worker.js",
+    "static/css/2.9382be04.chunk.css.map": "/elkaCalendar/static/css/2.9382be04.chunk.css.map",
+    "static/css/main.0328cd33.chunk.css.map": "/elkaCalendar/static/css/main.0328cd33.chunk.css.map",
+    "static/js/2.13e6b53c.chunk.js.LICENSE.txt": "/elkaCalendar/static/js/2.13e6b53c.chunk.js.LICENSE.txt",
+    "static/media/success.a87b17af.svg": "/elkaCalendar/static/media/success.a87b17af.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a477c7da.js",
+    "static/css/2.9382be04.chunk.css",
+    "static/js/2.13e6b53c.chunk.js",
+    "static/css/main.0328cd33.chunk.css",
+    "static/js/main.193be0dc.chunk.js"
+  ]
+}
