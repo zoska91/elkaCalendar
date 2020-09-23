@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/elkaCalendar/static/css/main.0328cd33.chunk.css",
-    "main.js": "/elkaCalendar/static/js/main.93d6ecd2.chunk.js",
-    "main.js.map": "/elkaCalendar/static/js/main.93d6ecd2.chunk.js.map",
+    "main.js": "/elkaCalendar/static/js/main.db0b29c0.chunk.js",
+    "main.js.map": "/elkaCalendar/static/js/main.db0b29c0.chunk.js.map",
     "runtime-main.js": "/elkaCalendar/static/js/runtime-main.a477c7da.js",
     "runtime-main.js.map": "/elkaCalendar/static/js/runtime-main.a477c7da.js.map",
     "static/css/2.9382be04.chunk.css": "/elkaCalendar/static/css/2.9382be04.chunk.css",
-    "static/js/2.13e6b53c.chunk.js": "/elkaCalendar/static/js/2.13e6b53c.chunk.js",
-    "static/js/2.13e6b53c.chunk.js.map": "/elkaCalendar/static/js/2.13e6b53c.chunk.js.map",
+    "static/js/2.baf4f06c.chunk.js": "/elkaCalendar/static/js/2.baf4f06c.chunk.js",
+    "static/js/2.baf4f06c.chunk.js.map": "/elkaCalendar/static/js/2.baf4f06c.chunk.js.map",
     "index.html": "/elkaCalendar/index.html",
-    "precache-manifest.3e5f0d44857bd622a9d8064855eb6364.js": "/elkaCalendar/precache-manifest.3e5f0d44857bd622a9d8064855eb6364.js",
+    "precache-manifest.584f42d06319d41bb201012b5053c585.js": "/elkaCalendar/precache-manifest.584f42d06319d41bb201012b5053c585.js",
     "service-worker.js": "/elkaCalendar/service-worker.js",
     "static/css/2.9382be04.chunk.css.map": "/elkaCalendar/static/css/2.9382be04.chunk.css.map",
     "static/css/main.0328cd33.chunk.css.map": "/elkaCalendar/static/css/main.0328cd33.chunk.css.map",
-    "static/js/2.13e6b53c.chunk.js.LICENSE.txt": "/elkaCalendar/static/js/2.13e6b53c.chunk.js.LICENSE.txt",
+    "static/js/2.baf4f06c.chunk.js.LICENSE.txt": "/elkaCalendar/static/js/2.baf4f06c.chunk.js.LICENSE.txt",
     "static/media/success.a87b17af.svg": "/elkaCalendar/static/media/success.a87b17af.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a477c7da.js",
     "static/css/2.9382be04.chunk.css",
-    "static/js/2.13e6b53c.chunk.js",
+    "static/js/2.baf4f06c.chunk.js",
     "static/css/main.0328cd33.chunk.css",
-    "static/js/main.93d6ecd2.chunk.js"
+    "static/js/main.db0b29c0.chunk.js"
   ]
 }
