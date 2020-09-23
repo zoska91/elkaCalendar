@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/elkaCalendar/precache-manifest.7e80956ef678f2a3c37c306dba7cb969.js"
+  "/elkaCalendar/precache-manifest.3e5f0d44857bd622a9d8064855eb6364.js"
 );
 
 self.addEventListener('message', (event) => {
